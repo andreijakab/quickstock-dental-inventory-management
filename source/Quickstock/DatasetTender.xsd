@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="DatasetTender" targetNamespace="http://tempuri.org/DatasetTender.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/DatasetTender.xsd" xmlns:mstns="http://tempuri.org/DatasetTender.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="DatasetTender" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Tender">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Title" type="xs:string" minOccurs="0" />
+							<xs:element name="FirstName" type="xs:string" minOccurs="0" />
+							<xs:element name="LastName" type="xs:string" minOccurs="0" />
+							<xs:element name="Products.MatName" type="xs:string" minOccurs="0" />
+							<xs:element name="SubProducts.MatName" type="xs:string" minOccurs="0" />
+							<xs:element name="Trademark" type="xs:string" minOccurs="0" />
+							<xs:element name="Pack" type="xs:string" minOccurs="0" />
+							<xs:element name="ordUnits" type="xs:int" minOccurs="0" />
+							<xs:element name="CompanyName" type="xs:string" minOccurs="0" />
+							<xs:element name="BillingAdress" type="xs:string" minOccurs="0" />
+							<xs:element name="City" type="xs:string" minOccurs="0" />
+							<xs:element name="StateOrProvince" type="xs:string" minOccurs="0" />
+							<xs:element name="PostalCode" type="xs:string" minOccurs="0" />
+							<xs:element name="ConTitle" type="xs:string" minOccurs="0" />
+							<xs:element name="Country" type="xs:string" />
+							<xs:element name="ContactFirstName" type="xs:string" minOccurs="0" />
+							<xs:element name="ContactLastName" type="xs:string" minOccurs="0" />
+							<xs:element name="PhoneNumber" type="xs:string" minOccurs="0" />
+							<xs:element name="FaxNumber" type="xs:string" minOccurs="0" />
+							<xs:element name="Email" type="xs:string" minOccurs="0" />
+							<xs:element name="CustomId" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="DentalOfficeInformation">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="SetUpId" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="CompanyName" type="xs:string" minOccurs="0" />
+							<xs:element name="Adress" type="xs:string" minOccurs="0" />
+							<xs:element name="City" type="xs:string" minOccurs="0" />
+							<xs:element name="StateOrProvince" type="xs:string" minOccurs="0" />
+							<xs:element name="PostalCode" type="xs:string" minOccurs="0" />
+							<xs:element name="Country" type="xs:string" minOccurs="0" />
+							<xs:element name="PhoneNumber" type="xs:string" minOccurs="0" />
+							<xs:element name="FaxNumber" type="xs:string" minOccurs="0" />
+							<xs:element name="Email" type="xs:string" minOccurs="0" />
+							<xs:element name="Doctor" type="xs:string" minOccurs="0" />
+							<xs:element name="DrPhone" type="xs:string" minOccurs="0" />
+							<xs:element name="DrEmail" type="xs:string" minOccurs="0" />
+							<xs:element name="StartDate" type="xs:dateTime" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="DatasetTenderKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:DentalOfficeInformation" />
+			<xs:field xpath="mstns:SetUpId" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

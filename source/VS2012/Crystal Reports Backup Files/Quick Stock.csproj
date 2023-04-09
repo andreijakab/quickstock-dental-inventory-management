@@ -1,0 +1,660 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CE940054-FE4F-4074-8BDE-ACA506F742BC}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Quick Stock</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DSMS</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>DSMS.fclsGENInput</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Management">
+      <Name>System.Management</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="OrderQuery.csproj">
+      <Project>{BB7E232C-4B3F-47FC-B360-4ED3A4BE4A0E}</Project>
+      <Name>OrderQuery</Name>
+    </ProjectReference>
+    <ProjectReference Include="OSProgressCSharp.csproj">
+      <Name>OSProgressCSharp</Name>
+      <Project>{F98B01A1-74B5-4144-9C96-8FCA45B1054A}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="PriceTextBox.csproj">
+      <Project>{3460C228-E54B-42D0-A330-E2D1FD156E0F}</Project>
+      <Name>PriceTextBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="Utilities.csproj">
+      <Project>{16EC36ED-268C-4056-A9EA-5D6CC0AB6E0D}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\Quickstock\App.ico" />
+    <Content Include="..\Quickstock\DatasetCanceledBO.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatasetCanceledBO.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="..\Quickstock\DatasetOrder.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatasetOrder.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="..\Quickstock\DatasetReturn.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatasetReturn.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="..\Quickstock\DatasetTender.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatasetTender.Designer.cs</LastGenOutput>
+    </Content>
+    <EmbeddedResource Include="..\Quickstock\fclsGENOptions_SMTPServer.resx">
+      <DependentUpon>fclsGENOptions_SMTPServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\Order Management\fclsOMBackOrders_Update.resx">
+      <DependentUpon>fclsOMBackOrders_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\Order Management\fclsOMReturnProdCanceledBO.resx">
+      <DependentUpon>fclsOMReturnProdCanceledBO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\splash.png" />
+    <EmbeddedResource Include="..\Quickstock\Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="..\Quickstock\clsSMTPListViewItem.cs" />
+    <Compile Include="..\Quickstock\fclsGENOptions_SMTPServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\clsActivation2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\clsListViewColumnSorter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\clsRemoveOrderLineClickEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\Database Management\fclsDMEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\Database Management\fclsDMModifyProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\Database Management\fclsDMModifyProduct_Products.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\Database Management\fclsDMModifyProduct_SubProd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\Database Management\fclsDMSuppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\Database Management\fclsDMTrademarks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\DatasetCanceledBO.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatasetCanceledBO.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="..\Quickstock\DatasetOrder.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatasetOrder.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="..\Quickstock\DatasetReturn.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatasetReturn.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="..\Quickstock\DatasetTender.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatasetTender.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="..\Quickstock\fclsGENActivation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\fclsGENBackOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\fclsGENBoCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\fclsGENInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\fclsGENLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\fclsGENOldOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\fclsGENOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\fclsGenRemindMe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\fclsGENSendEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\fclsGENSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\fclsLSTViewReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\fclsOIViewOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\fclsOIViewOrdRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\fclsOMDBPrices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\fclsGENSplashScreen2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\fclsGENSplashScreen2.Designer.cs">
+      <DependentUpon>fclsGENSplashScreen2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\Quickstock\InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\OldOrderLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\Order Management\clsBackorderListViewItem.cs" />
+    <Compile Include="..\Quickstock\Order Management\ComparePricesLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\Order Management\ComparePricesLineContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\Order Management\fclsOMBackOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\Order Management\fclsOMBackOrders_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\Order Management\fclsOMCheckOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\Order Management\fclsOMComparePrices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\Order Management\fclsOMEmergencyOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\Order Management\fclsOMPrevOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\Order Management\fclsOMReturnProdCanceledBO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\Order Management\fclsOMStandByOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\Order Management\OrderLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\Order Management\OrderLineContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\Order Management\ReceivedOrderLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\Order Management\ReceivedOrderLineContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\Product Management\fclsOIAccounting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\Product Management\fclsOIAccounting_Pay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\Product Management\fclsOIStatistic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\Product Management\fclsOIViewProd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Quickstock\Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="..\Quickstock\RPTCategPrint.cs">
+      <DependentUpon>RPTCategPrint.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="..\Quickstock\RPTEmployeesList.cs">
+      <DependentUpon>RPTEmployeesList.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="..\Quickstock\RPTExpenses.cs">
+      <DependentUpon>RPTExpenses.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="..\Quickstock\RPTIndexAlphabetic.cs">
+      <DependentUpon>RPTIndexAlphabetic.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="..\Quickstock\RPTProdGraph.cs">
+      <DependentUpon>RPTProdGraph.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="..\Quickstock\RPTProdPrint.cs">
+      <DependentUpon>RPTProdPrint.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="..\Quickstock\RPTProductByCategory.cs">
+      <DependentUpon>RPTProductByCategory.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="..\Quickstock\RPTSuppliersList.cs">
+      <DependentUpon>RPTSuppliersList.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="..\Quickstock\RPTViewCancelation.cs">
+      <DependentUpon>RPTViewCancelation.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="..\Quickstock\RPTViewOrder.cs">
+      <DependentUpon>RPTViewOrder.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="..\Quickstock\RPTViewPrevOrder.cs">
+      <DependentUpon>RPTViewPrevOrder.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="..\Quickstock\RPTViewReturnedOrders.cs">
+      <DependentUpon>RPTViewReturnedOrders.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="..\Quickstock\RPTViewTender.cs">
+      <DependentUpon>RPTViewTender.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <None Include="..\Quickstock\app.config" />
+    <None Include="..\Quickstock\DatasetCanceledBO.xsx">
+      <DependentUpon>DatasetCanceledBO.xsd</DependentUpon>
+    </None>
+    <None Include="..\Quickstock\DatasetOrder.xsx">
+      <DependentUpon>DatasetOrder.xsd</DependentUpon>
+    </None>
+    <None Include="..\Quickstock\DatasetReturn.xsx">
+      <DependentUpon>DatasetReturn.xsd</DependentUpon>
+    </None>
+    <None Include="..\Quickstock\DatasetTender.xsx">
+      <DependentUpon>DatasetTender.xsd</DependentUpon>
+    </None>
+    <EmbeddedResource Include="..\Quickstock\Database Management\fclsDMModifyProduct.resx">
+      <DependentUpon>fclsDMModifyProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\Database Management\fclsDMModifyProduct_Products.resx">
+      <DependentUpon>fclsDMModifyProduct_Products.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\Database Management\fclsDMModifyProduct_SubProd.resx">
+      <DependentUpon>fclsDMModifyProduct_SubProd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\Database Management\fclsDMSuppliers.resx">
+      <DependentUpon>fclsDMSuppliers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\Database Management\fclsDMTrademarks.resx">
+      <DependentUpon>fclsDMTrademarks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\fclsGENActivation.resx">
+      <DependentUpon>fclsGENActivation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\fclsGENBackOrders.resx">
+      <DependentUpon>fclsGENBackOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\fclsGENBoCancel.resx">
+      <DependentUpon>fclsGENBoCancel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\fclsGENInput.resx">
+      <DependentUpon>fclsGENInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\fclsGENLogin.resx">
+      <DependentUpon>fclsGENLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\fclsGENOldOrder.resx">
+      <DependentUpon>fclsGENOldOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\fclsGENOptions.resx">
+      <DependentUpon>fclsGENOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\fclsGenRemindMe.resx">
+      <DependentUpon>fclsGenRemindMe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\fclsGENSendEmail.resx">
+      <DependentUpon>fclsGENSendEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\fclsGENSplashScreen.resx">
+      <DependentUpon>fclsGENSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\fclsGENSplashScreen2.resx">
+      <DependentUpon>fclsGENSplashScreen2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\fclsLSTViewReport.resx">
+      <DependentUpon>fclsLSTViewReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\fclsOIViewOrders.resx">
+      <DependentUpon>fclsOIViewOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\fclsOIViewOrdRpt.resx">
+      <DependentUpon>fclsOIViewOrdRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\fclsOMDBPrices.resx">
+      <DependentUpon>fclsOMDBPrices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\InputBox.resx">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\OldOrderLine.resx">
+      <DependentUpon>OldOrderLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\Order Management\ComparePricesLine.resx">
+      <DependentUpon>ComparePricesLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\Order Management\ComparePricesLineContainer.resx">
+      <DependentUpon>ComparePricesLineContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\Order Management\fclsOMBackOrders.resx">
+      <DependentUpon>fclsOMBackOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\Order Management\fclsOMCheckOrders.resx">
+      <DependentUpon>fclsOMCheckOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\Order Management\fclsOMComparePrices.resx">
+      <DependentUpon>fclsOMComparePrices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\Order Management\fclsOMEmergencyOrder.resx">
+      <DependentUpon>fclsOMEmergencyOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\Order Management\fclsOMPrevOrders.resx">
+      <DependentUpon>fclsOMPrevOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\Order Management\fclsOMStandByOrder.resx">
+      <DependentUpon>fclsOMStandByOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\Order Management\OrderLine.resx">
+      <DependentUpon>OrderLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\Order Management\OrderLineContainer.resx">
+      <DependentUpon>OrderLineContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\Order Management\ReceivedOrderLine.resx">
+      <DependentUpon>ReceivedOrderLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\Order Management\ReceivedOrderLineContainer.resx">
+      <DependentUpon>ReceivedOrderLineContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\Product Management\fclsOIAccounting.resx">
+      <DependentUpon>fclsOIAccounting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\Product Management\fclsOIAccounting_Pay.resx">
+      <DependentUpon>fclsOIAccounting_Pay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\Product Management\fclsOIStatistic.resx">
+      <DependentUpon>fclsOIStatistic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\Product Management\fclsOIViewProd.resx">
+      <DependentUpon>fclsOIViewProd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\RPTCategPrint.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPTCategPrint.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\RPTEmployeesList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPTEmployeesList.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\RPTExpenses.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPTExpenses.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\RPTIndexAlphabetic.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPTIndexAlphabetic.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\RPTProdGraph.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPTProdGraph.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\RPTProdPrint.resx">
+      <DependentUpon>RPTProdPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\RPTProdPrint.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPTProdPrint.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\RPTProductByCategory.resx">
+      <DependentUpon>RPTProductByCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\RPTProductByCategory.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPTProductByCategory.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\RPTSuppliersList.resx">
+      <DependentUpon>RPTSuppliersList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\RPTSuppliersList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPTSuppliersList.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\RPTViewCancelation.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPTViewCancelation.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\RPTViewOrder.resx">
+      <DependentUpon>RPTViewOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\RPTViewOrder.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPTViewOrder.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\RPTViewPrevOrder.resx">
+      <DependentUpon>RPTViewPrevOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\RPTViewPrevOrder.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPTViewPrevOrder.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\RPTViewReturnedOrders.resx">
+      <DependentUpon>RPTViewReturnedOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\RPTViewReturnedOrders.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPTViewReturnedOrders.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\RPTViewTender.resx">
+      <DependentUpon>RPTViewTender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\Quickstock\RPTViewTender.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPTViewTender.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Database Management\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
